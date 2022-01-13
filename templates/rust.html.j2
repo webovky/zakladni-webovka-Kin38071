@@ -1,0 +1,20 @@
+{% extends "base.html.j2" %}
+
+{%block title%}Rust{%endblock%}
+
+{% block obsah %}
+
+<h1>Rust</h1>
+
+<p>Rust je svobodný víceúčelový, multiparadigmatický, kompilovaný programovací jazyk, vyvinutý organizací Mozilla Research. Je navržen jako „bezpečný, paralelní, praktický programovací jazyk“, podporující čistě funkcionální, imperativně-procedurální, strukturované a objektově orientované programovací styly.</p>
+
+<p>Tento programovací jazyk pochází z osobního projektu zaměstnance Mozilly jménem Graydon Hoare. Mozilla začala sponzorovat tento projekt v roce 2009 a zveřejnila ho v roce 2010. Ten samý rok se práce posunuly z počátečního překladače (naprogramovaného v OCaml) do sebe-hostujícího překladače napsaného v Rustu. Tento, známý jako rustc, úspěšně přeložil sám sebe v roce 2011. rustc používá LLVM jako svůj back-end.</p>
+
+<p>Prvně číslovaná před alfa vydání překladače Rust přišla v lednu 2012. Rust 1.0, první stabilní verze, byla vydána 15. května 2015.</p>
+
+<p>Třebaže je vývoj sponzorován Mozillou, jde o projekt otevřeného software. Design tohoto jazyka byl vyladěn zkušenostmi z programování jádra webového prohlížeče Servo a kompilátoru jazyka Rust. Velké množství současných příspěvků pochází od členů komunity.</p>
+
+<img src="{{ url_for('static', filename='rust.png') }}" alt="">
+
+{% endblock obsah %}
+

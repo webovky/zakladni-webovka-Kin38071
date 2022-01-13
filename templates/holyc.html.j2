@@ -1,0 +1,26 @@
+{% extends "base.html.j2" %}
+
+{%block title%}HolyC{%endblock%}
+
+{% block obsah %}
+
+<h1>HolyC</h1>
+
+<p>HolyC je variace jazyka C vyvinutá Terrym A. Davisem. HolyC je oficiální programovací jazyk pro operační systém Temple (TempleOS).</p>
+
+<p>Oficiální dokumentace HolyC je poskytována s TempleOS</p>
+
+<img src="{{ url_for('static', filename='holyc.png') }}" alt="" class="small">
+
+<h2>TempleOS</h2>
+
+<p>TempleOS (dříve J Operating System, LoseThos a SparrowOS) je odlehčený operační systém (OS) s biblickou tematikou, který má být třetím chrámem, o němž se píše v Bibli. Jeho tvůrcem je americký programátor Terry A. Davis, který jej vyvíjel sám v průběhu deseti let.</p>
+
+<p>Systém samotný se dá charakterizovat jako moderní (x86-64) Commodore 64, který používal rozhraní podobné směsici DOSu a Turbo C. Davis prohlásil, že vlastnosti systému, jako je rozlišení 640x480, 16barevný displej a jediný zvukový hlas, byly navrženy podle výslovných pokynů Boha. Namísto BASICu byl naprogramován pomocí nově vytvořené varianty jazyka C pojmenované HolyC ("Svaté C") a obsahoval originální letecký simulátor, kompilátor a jádro.</p>
+
+<p>Systém TempleOS byl vydán v roce 2005 jako J Operating System, v roce 2013 jako TempleOS a poslední aktualizace vyšla roku 2017. V technologickém světě byl přijat s převážně příznivými recenzemi a Davis si na něm vybudoval malou online komunitu.</p>
+
+<img src="{{ url_for('static', filename='templeos.png') }}" alt="">
+
+{% endblock obsah %}
+
