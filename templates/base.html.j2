@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>{%block title%}Programování{%endblock%}</title>
+    
+    <link rel="stylesheet" 
+          href="{{ url_for('static', filename='styles.css')}}">
+
+</head>
+
+<body>
+ <h1 class="center">Programování</h1>
+
+<ul class="center big">
+    <li><a href="{{ url_for('index') }}">Home</a></li>
+    <li><a href="{{ url_for('python') }}">Python</a></li>
+    <li><a href="{{ url_for('rust') }}">Rust</a></li>
+    <li><a href="{{ url_for('holyc') }}">HolyC</a></li>
+    <li><a href="{{ url_for('login') }}">Login</a></li>
+</ul>
+
+<p class="login big center">
+{% if 'user' in session  %}
+Jsi přihlášen jako <strong>{{ session.get('user') }}</strong>.
+<a href="{{ url_for('logout') }}">Odhlásit</a>
+{% else %}
+Nejsi přihlášen.
+<a href="{{ url_for('login') }}">Přihlásit</a>
+{% endif %}
+</p>
+<div class="center">
+{% for category, message in get_flashed_messages(with_categories=true) %}
+    <p class="message {{ category }}">{{ message }}</p>
+{% endfor %}
+</div>
+<hr>
+
+{% block obsah %}
+<h1>Programování</h1>
+<p>Programování je v informatice proces od návrhu řešení problému pomocí výpočetní techniky ke spustitelnému počítačovému programu. Zahrnuje činnosti jako je analýza problému, jeho pochopení, nalezení algoritmu a zápis zdrojového kódu v cílovém programovacím jazyce (kódování, anglicky coding). Účelem programování je nalezení takové sekvence příkazů (resp. strojových instrukcí), které může počítač provést, a zadaný úkol tak automatizovaně vyřešit. Proces psaní zdrojových kódů často vyžaduje odborné znalosti v mnoha různých oborech, například návrhu aplikací a jejich rozhraní, logiky a algoritmizace.
+
+Související činností je i testování a ladění počítačového programu (software), včetně jeho následné údržby. Celkově se vše označuje jako proces vývoje softwaru a využívá se při něm softwarové inženýrství.</p>
+
+<h2>Programovací jazyky</h2>
+<p>Pod pojmem programovací jazyk rozumíme prostředek pro zápis algoritmů, jež mohou být provedeny na počítači. Je komunikačním nástrojem mezi programátorem, který v programovacím jazyce formuluje postup řešení daného problému, a počítačem, který program interpretuje technickými prostředky.</p>
+
+<img src="{{ url_for('static', filename='programovani.jpg') }}" alt="">
+
+{% endblock obsah %} 
+
+</body>
+</html>
+
